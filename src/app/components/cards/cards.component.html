@@ -1,0 +1,16 @@
+<div class="card-columns m-5 animated fadeIn">
+
+
+    <div (click)="showArtits( song )" *ngFor="let song of songs" class="card puntero">
+        <img class="card-img-top" [src]="song.images | noimage" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ song.name }}</h5>
+            <p class="card-text">
+                <span *ngFor="let artista of song.artists" class="badge badge-pill badge-primary">
+                    {{ artista.name }}
+                </span>
+            </p>
+        </div>
+    </div>
+
+</div>
